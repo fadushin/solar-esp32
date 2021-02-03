@@ -134,7 +134,7 @@
     (add_net "Net-(U1-Pad4)")
   )
 
-  (module solar-0xFD02:CN3801 (layer F.Cu) (tedit 601079F1) (tstamp 601088CB)
+  (module 0xFD:CN3801 (layer F.Cu) (tedit 601079F1) (tstamp 601088CB)
     (at 140.335 83.312)
     (path /6008F1F8)
     (fp_text reference U1 (at 1.143 2.794) (layer F.SilkS)
