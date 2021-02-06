@@ -406,7 +406,7 @@ Wire Wire Line
 Wire Wire Line
 	4850 6050 4850 6200
 Wire Wire Line
-	4850 6200 5100 6200
+	4850 6200 5000 6200
 Wire Wire Line
 	5400 6200 5850 6200
 Connection ~ 5850 6200
@@ -550,7 +550,7 @@ Wire Wire Line
 Connection ~ 5550 5900
 Connection ~ 5550 5300
 Wire Wire Line
-	5550 5300 4850 5300
+	5550 5300 5200 5300
 $Comp
 L Transistor_FET:AO3401A Q2
 U 1 1 601FFFAC
@@ -656,4 +656,29 @@ F 3 "~" H 2100 1550 50  0001 C CNN
 	1    2100 1550
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:CP1_Small C9
+U 1 1 601C8E5A
+P 5200 5600
+F 0 "C9" V 4972 5600 50  0000 C CNN
+F 1 "100nF" V 5063 5600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5238 5450 50  0001 C CNN
+F 3 "~" H 5200 5600 50  0001 C CNN
+	1    5200 5600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5200 5500 5200 5300
+Connection ~ 5200 5300
+Wire Wire Line
+	5200 5300 4850 5300
+Wire Wire Line
+	5200 5700 5200 6050
+Wire Wire Line
+	5200 6050 5000 6050
+Wire Wire Line
+	5000 6050 5000 6200
+Connection ~ 5000 6200
+Wire Wire Line
+	5000 6200 5100 6200
 $EndSCHEMATC
