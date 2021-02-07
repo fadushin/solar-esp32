@@ -631,7 +631,7 @@ Connection ~ 6650 2750
 Wire Wire Line
 	6650 2750 6650 2850
 Wire Wire Line
-	6200 4750 7300 4750
+	6200 4750 6350 4750
 Wire Wire Line
 	5850 4000 6900 4000
 Wire Wire Line
@@ -641,7 +641,7 @@ Wire Wire Line
 	5850 4000 5850 4300
 Text Label 6200 5550 0    50   ~ 0
 ESP-LOAD
-Text Label 6450 4750 0    50   ~ 0
+Text Label 7100 4750 0    50   ~ 0
 LVCO
 Text Label 5250 4600 0    50   ~ 0
 Cd
@@ -681,4 +681,40 @@ Wire Wire Line
 Connection ~ 5000 6200
 Wire Wire Line
 	5000 6200 5100 6200
+$Comp
+L Device:D_Zener D5
+U 1 1 602F07BB
+P 6500 4750
+F 0 "D5" H 6500 4967 50  0000 C CNN
+F 1 "D_Zener" H 6500 4876 50  0000 C CNN
+F 2 "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6500 4750 50  0001 C CNN
+F 3 "~" H 6500 4750 50  0001 C CNN
+	1    6500 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 4750 7000 4750
+$Comp
+L Device:R R9
+U 1 1 602F1515
+P 6550 3800
+F 0 "R9" V 6343 3800 50  0000 C CNN
+F 1 "10k" V 6434 3800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 6480 3800 50  0001 C CNN
+F 3 "~" H 6550 3800 50  0001 C CNN
+	1    6550 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7000 4750 7000 3800
+Wire Wire Line
+	7000 3800 6700 3800
+Connection ~ 7000 4750
+Wire Wire Line
+	7000 4750 7300 4750
+Wire Wire Line
+	6400 3800 6150 3800
+Wire Wire Line
+	6150 3800 6150 3550
+Connection ~ 6150 3550
 $EndSCHEMATC
