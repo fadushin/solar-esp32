@@ -47,18 +47,18 @@ F 3 "~" H 1500 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1_Small C2
+L Device:C C2
 U 1 1 600DCF7E
-P 2200 1600
-F 0 "C2" H 2291 1646 50  0000 L CNN
-F 1 "10uF" H 2250 1500 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2238 1450 50  0001 C CNN
-F 3 "~" H 2200 1600 50  0001 C CNN
-	1    2200 1600
+P 2200 1650
+F 0 "C2" H 2291 1696 50  0000 L CNN
+F 1 "10uF" H 2250 1550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2238 1500 50  0001 C CNN
+F 3 "~" H 2200 1650 50  0001 C CNN
+	1    2200 1650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1_Small C4
+L Device:C C4
 U 1 1 600DDAC2
 P 3800 1550
 F 0 "C4" H 3891 1596 50  0000 L CNN
@@ -80,8 +80,6 @@ F 3 "~" H 3050 2050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3800 1250 3450 1250
-Wire Wire Line
 	3600 2150 3450 2150
 Connection ~ 3450 1250
 Wire Wire Line
@@ -95,21 +93,13 @@ Wire Wire Line
 	3050 1400 3050 1250
 Connection ~ 3050 1250
 Wire Wire Line
-	3050 1250 2550 1250
-Wire Wire Line
 	3050 1700 3050 1750
-Connection ~ 2200 1250
-Wire Wire Line
-	2200 1250 1850 1250
 Wire Wire Line
 	1000 1350 1200 1350
 Wire Wire Line
 	1200 1350 1200 2300
 Wire Wire Line
 	4000 3550 4000 3000
-Wire Wire Line
-	2200 1700 2200 3550
-Connection ~ 2200 3550
 Wire Wire Line
 	1500 2650 1500 2300
 $Comp
@@ -143,14 +133,14 @@ F 3 "~" H 4650 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1_Small C7
+L Device:C C7
 U 1 1 600F9A74
-P 4650 3350
-F 0 "C7" H 4741 3396 50  0000 L CNN
-F 1 "220nF" H 4741 3305 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 4688 3200 50  0001 C CNN
-F 3 "~" H 4650 3350 50  0001 C CNN
-	1    4650 3350
+P 4650 3300
+F 0 "C7" H 4741 3346 50  0000 L CNN
+F 1 "220nF" H 4741 3255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 4688 3150 50  0001 C CNN
+F 3 "~" H 4650 3300 50  0001 C CNN
+	1    4650 3300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -209,7 +199,7 @@ Wire Wire Line
 Wire Wire Line
 	5550 1250 5450 1250
 $Comp
-L Device:CP1_Small C6
+L Device:C C6
 U 1 1 601047D3
 P 6150 2000
 F 0 "C6" H 6241 2046 50  0000 L CNN
@@ -249,16 +239,6 @@ Connection ~ 6450 2400
 Wire Wire Line
 	6650 2500 6150 2500
 Connection ~ 6150 2500
-Wire Wire Line
-	3800 1250 3800 1450
-Wire Wire Line
-	2200 1250 2200 1500
-Wire Wire Line
-	4650 3000 4650 3250
-Wire Wire Line
-	3800 1650 3800 1800
-Wire Wire Line
-	6150 2100 6150 2250
 Wire Wire Line
 	6150 1250 6150 1700
 Wire Wire Line
@@ -304,10 +284,8 @@ $EndComp
 Connection ~ 1200 2300
 Wire Wire Line
 	1200 2300 1200 3550
-Wire Wire Line
-	5050 3550 5150 3550
 $Comp
-L Device:CP1_Small C10
+L Device:C C10
 U 1 1 6024A6DF
 P 5700 6300
 F 0 "C10" V 5472 6300 50  0000 C CNN
@@ -364,10 +342,6 @@ $EndComp
 Wire Wire Line
 	5850 7200 5850 6300
 Wire Wire Line
-	5800 6300 5850 6300
-Wire Wire Line
-	5550 6300 5600 6300
-Wire Wire Line
 	5650 7200 5650 6850
 Wire Wire Line
 	5650 6850 3650 6850
@@ -386,8 +360,6 @@ Wire Wire Line
 	5850 6000 5850 6300
 Wire Wire Line
 	5750 7200 5750 6400
-Wire Wire Line
-	5750 6400 4750 6400
 Wire Wire Line
 	4250 6400 4250 6000
 Connection ~ 4250 6000
@@ -414,7 +386,7 @@ L Transistor_FET:AO3401A Q1
 U 1 1 600EAFD7
 P 4100 1150
 F 0 "Q1" V 4000 1250 50  0000 C CNN
-F 1 "P-Chan" V 4350 1150 50  0000 C CNN
+F 1 "DMP1045U-7" V 4350 1150 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 4300 1075 50  0001 L CIN
 F 3 "https://www.mouser.com/datasheet/2/408/SSM3J332R_datasheet_en_20181015-1150575.pdf" V 4100 1150 50  0001 L CNN
 	1    4100 1150
@@ -432,14 +404,14 @@ F 3 "~" H 800 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1_Small C3
+L Device:C C3
 U 1 1 602D4760
-P 2550 1600
-F 0 "C3" H 2650 1600 50  0000 L CNN
-F 1 "100nF" H 2500 1500 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2588 1450 50  0001 C CNN
-F 3 "~" H 2550 1600 50  0001 C CNN
-	1    2550 1600
+P 2550 1650
+F 0 "C3" H 2650 1650 50  0000 L CNN
+F 1 "100nF" H 2500 1550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2588 1500 50  0001 C CNN
+F 3 "~" H 2550 1650 50  0001 C CNN
+	1    2550 1650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -450,13 +422,6 @@ Connection ~ 1850 1250
 Wire Wire Line
 	1850 1700 1850 3550
 Connection ~ 1850 3550
-Wire Wire Line
-	1850 3550 2200 3550
-Wire Wire Line
-	2550 1250 2550 1500
-Connection ~ 2550 1250
-Wire Wire Line
-	2550 1250 2200 1250
 Text Label 4350 1250 0    50   ~ 0
 DRAIN
 Wire Wire Line
@@ -480,25 +445,20 @@ Wire Wire Line
 Wire Wire Line
 	4250 3550 4250 5300
 $Comp
-L Device:CP1_Small C8
+L Device:C C8
 U 1 1 601F4789
-P 5150 4200
-F 0 "C8" V 4922 4200 50  0000 C CNN
-F 1 "100nF" V 5013 4200 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5188 4050 50  0001 C CNN
-F 3 "~" H 5150 4200 50  0001 C CNN
-	1    5150 4200
+P 5150 4150
+F 0 "C8" V 4922 4150 50  0000 C CNN
+F 1 "100nF" V 5013 4150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5188 4000 50  0001 C CNN
+F 3 "~" H 5150 4150 50  0001 C CNN
+	1    5150 4150
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	5500 4600 5150 4600
 Wire Wire Line
 	5150 4600 5150 4300
-Wire Wire Line
-	5150 4100 5150 3550
-Connection ~ 5150 3550
-Wire Wire Line
-	5150 3550 6150 3550
 Wire Wire Line
 	5850 5150 5850 5300
 Wire Wire Line
@@ -510,14 +470,12 @@ Wire Wire Line
 	5550 6300 5550 5300
 Connection ~ 5550 6300
 Connection ~ 5550 5300
-Wire Wire Line
-	5550 5300 4750 5300
 $Comp
 L Transistor_FET:AO3401A Q2
 U 1 1 601FFFAC
 P 7000 5200
 F 0 "Q2" H 6950 5050 50  0000 C CNN
-F 1 "P-Chan" V 7251 5200 50  0000 C CNN
+F 1 "SSM3J332RLF" V 7251 5200 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 7200 5125 50  0001 L CIN
 F 3 "https://www.mouser.com/datasheet/2/408/SSM3J332R_datasheet_en_20181015-1150575.pdf" V 7000 5200 50  0001 L CNN
 	1    7000 5200
@@ -543,9 +501,6 @@ F 3 "" H 5850 4600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4300 1250 4600 1250
-Wire Wire Line
-	3800 1250 3900 1250
-Connection ~ 3800 1250
 Wire Wire Line
 	4100 1800 4100 1700
 Wire Wire Line
@@ -612,13 +567,13 @@ U 1 1 602D4390
 P 1850 1600
 F 0 "C1" H 1941 1646 50  0000 L CNN
 F 1 "10uF" H 1900 1500 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_3x5.4" H 1888 1450 50  0001 C CNN
+F 2 "0xFD:CP_Elec_3x6.4" H 1888 1450 50  0001 C CNN
 F 3 "~" H 1850 1600 50  0001 C CNN
 	1    1850 1600
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1_Small C9
+L Device:C C9
 U 1 1 601C8E5A
 P 4750 5600
 F 0 "C9" V 4522 5600 50  0000 C CNN
@@ -628,11 +583,6 @@ F 3 "~" H 4750 5600 50  0001 C CNN
 	1    4750 5600
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4750 5500 4750 5300
-Connection ~ 4750 5300
-Wire Wire Line
-	4750 5300 4250 5300
 $Comp
 L Device:D_Zener D5
 U 1 1 602F07BB
@@ -673,7 +623,7 @@ U 1 1 60244BB1
 P 5750 2000
 F 0 "C5" H 5841 2046 50  0000 L CNN
 F 1 "10uF" H 5841 1955 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_3x5.4" H 5788 1850 50  0001 C CNN
+F 2 "0xFD:CP_Elec_3x6.4" H 5788 1850 50  0001 C CNN
 F 3 "~" H 5750 2000 50  0001 C CNN
 	1    5750 2000
 	1    0    0    -1  
@@ -682,14 +632,10 @@ Wire Wire Line
 	5750 1900 5750 1700
 Wire Wire Line
 	5750 1700 6150 1700
-Connection ~ 6150 1700
-Wire Wire Line
-	6150 1700 6150 1900
 Wire Wire Line
 	5750 2100 5750 2250
 Wire Wire Line
 	5850 2400 6450 2400
-Connection ~ 6150 2250
 Wire Wire Line
 	6150 2250 6150 2500
 $Comp
@@ -738,12 +684,7 @@ $EndComp
 Wire Wire Line
 	4250 3550 4000 3550
 Wire Wire Line
-	4250 6000 5050 6000
-Wire Wire Line
-	4750 5700 4750 6400
-Connection ~ 4750 6400
-Wire Wire Line
-	4750 6400 4250 6400
+	4250 6000 4750 6000
 Wire Wire Line
 	5750 2250 6150 2250
 Wire Wire Line
@@ -752,15 +693,70 @@ Wire Wire Line
 	1500 1250 1850 1250
 Wire Wire Line
 	3600 2650 1500 2650
-Wire Wire Line
-	2550 3550 3650 3550
-Connection ~ 2550 3550
-Wire Wire Line
-	2200 3550 2550 3550
-Wire Wire Line
-	2550 1700 2550 3550
 Text Label 3150 2650 0    50   ~ 0
 MPPT
 Text Notes 650  7600 0    79   ~ 0
 Apache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/
+Wire Wire Line
+	1850 1250 2200 1250
+Wire Wire Line
+	3450 1250 3800 1250
+Wire Wire Line
+	5050 3550 5150 3550
+Wire Wire Line
+	1850 3550 2200 3550
+Wire Wire Line
+	2200 1500 2200 1250
+Connection ~ 2200 1250
+Wire Wire Line
+	2200 1250 2550 1250
+Wire Wire Line
+	2550 1500 2550 1250
+Connection ~ 2550 1250
+Wire Wire Line
+	2550 1250 3050 1250
+Wire Wire Line
+	2200 1800 2200 3550
+Connection ~ 2200 3550
+Wire Wire Line
+	2200 3550 2550 3550
+Wire Wire Line
+	2550 1800 2550 3550
+Connection ~ 2550 3550
+Wire Wire Line
+	2550 3550 3650 3550
+Wire Wire Line
+	5150 4000 5150 3550
+Connection ~ 5150 3550
+Wire Wire Line
+	5150 3550 6150 3550
+Wire Wire Line
+	3800 1800 3800 1700
+Wire Wire Line
+	3800 1400 3800 1250
+Connection ~ 3800 1250
+Wire Wire Line
+	3800 1250 3900 1250
+Wire Wire Line
+	6150 2150 6150 2250
+Connection ~ 6150 2250
+Wire Wire Line
+	6150 1850 6150 1700
+Connection ~ 6150 1700
+Wire Wire Line
+	4650 3150 4650 3000
+Wire Wire Line
+	4250 6400 5750 6400
+Wire Wire Line
+	4750 5450 4750 5300
+Wire Wire Line
+	4250 5300 4750 5300
+Connection ~ 4750 5300
+Wire Wire Line
+	4750 5300 5550 5300
+Wire Wire Line
+	4750 5750 4750 6000
+Connection ~ 4750 6000
+Wire Wire Line
+	4750 6000 5050 6000
 $EndSCHEMATC
