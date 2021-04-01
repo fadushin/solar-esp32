@@ -359,9 +359,9 @@ Connection ~ 5850 6000
 Wire Wire Line
 	5850 6000 5850 6300
 Wire Wire Line
-	5750 7200 5750 6400
+	5750 7200 5750 6500
 Wire Wire Line
-	4250 6400 4250 6000
+	4250 6500 4250 6000
 Connection ~ 4250 6000
 Text Label 3150 3550 0    50   ~ 0
 GND
@@ -369,7 +369,7 @@ Text Label 5500 2400 0    50   ~ 0
 BAT+
 Text Label 2050 1250 0    50   ~ 0
 SOL+
-Text Label 5150 6400 0    50   ~ 0
+Text Label 5150 6500 0    50   ~ 0
 ADC
 Text Label 4350 6850 0    50   ~ 0
 ESP-LED
@@ -589,7 +589,7 @@ U 1 1 602F07BB
 P 6500 4750
 F 0 "D5" H 6500 4967 50  0000 C CNN
 F 1 "D_Zener" H 6500 4876 50  0000 C CNN
-F 2 "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6500 4750 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 6500 4750 50  0001 C CNN
 F 3 "~" H 6500 4750 50  0001 C CNN
 	1    6500 4750
 	1    0    0    -1  
@@ -746,7 +746,7 @@ Connection ~ 6150 1700
 Wire Wire Line
 	4650 3150 4650 3000
 Wire Wire Line
-	4250 6400 5750 6400
+	4250 6500 5750 6500
 Wire Wire Line
 	4750 5450 4750 5300
 Wire Wire Line
