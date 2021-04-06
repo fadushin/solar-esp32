@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "0xFD02-solar"
-Date "2021-02-12"
-Rev "v0.1"
+Title "solar-esp32"
+Date "2021-04-18"
+Rev "v0.1.0"
 Comp "(c) 2021 dushin.net"
 Comment1 "Charging circuit for ESP32 using 6v Solar panel and 3.2v LiFePo4 batteries"
 Comment2 ""
@@ -20,7 +20,7 @@ P 3950 2400
 F 0 "U1" H 4250 3000 50  0000 C CNN
 F 1 "CN3801" H 4200 1800 50  0000 C CNN
 F 2 "0xFD:CN3801" H 3050 3000 50  0001 C CNN
-F 3 "" H 3050 3000 50  0001 C CNN
+F 3 "http://www.consonance-elec.com/pdf/datasheet/DSE-CN3801.pdf" H 3050 3000 50  0001 C CNN
 	1    3950 2400
 	1    0    0    -1  
 $EndComp
@@ -148,7 +148,7 @@ Wire Wire Line
 Wire Wire Line
 	4650 2550 4650 2700
 Wire Wire Line
-	4650 3550 4250 3550
+	4650 3550 4500 3550
 Connection ~ 4000 3550
 $Comp
 L Device:D_Schottky D1
@@ -157,7 +157,7 @@ P 4750 1250
 F 0 "D1" H 4750 1033 50  0000 C CNN
 F 1 "D_Schottky" H 4750 1124 50  0000 C CNN
 F 2 "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4750 1250 50  0001 C CNN
-F 3 "~" H 4750 1250 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/40/schottky-776407.pdf" H 4750 1250 50  0001 C CNN
 	1    4750 1250
 	-1   0    0    1   
 $EndComp
@@ -168,7 +168,7 @@ P 5050 1800
 F 0 "D2" V 5004 1880 50  0000 L CNN
 F 1 "D_Schottky" V 5095 1880 50  0000 L CNN
 F 2 "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 5050 1800 50  0001 C CNN
-F 3 "~" H 5050 1800 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/40/schottky-776407.pdf" H 5050 1800 50  0001 C CNN
 	1    5050 1800
 	0    1    1    0   
 $EndComp
@@ -186,7 +186,7 @@ P 5300 1250
 F 0 "L1" V 5490 1250 50  0000 C CNN
 F 1 "L" V 5399 1250 50  0000 C CNN
 F 2 "0xFD:L-TYA4020" H 5300 1250 50  0001 C CNN
-F 3 "~" H 5300 1250 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/987/Laird_Performance_TYA4020_series__Rev_A_-1877538.pdf~" H 5300 1250 50  0001 C CNN
 	1    5300 1250
 	0    -1   -1   0   
 $EndComp
@@ -225,12 +225,12 @@ Connection ~ 5050 3550
 $Comp
 L Connector:Conn_01x02_Male J2
 U 1 1 60107AC2
-P 7000 2100
-F 0 "J2" H 7108 2281 50  0000 C CNN
-F 1 "BAT+" H 7108 2190 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7000 2100 50  0001 C CNN
-F 3 "~" H 7000 2100 50  0001 C CNN
-	1    7000 2100
+P 6850 2500
+F 0 "J2" H 6958 2681 50  0000 C CNN
+F 1 "BAT" H 6958 2590 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6850 2500 50  0001 C CNN
+F 3 "~" H 6850 2500 50  0001 C CNN
+	1    6850 2500
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -285,14 +285,14 @@ Connection ~ 1200 2300
 Wire Wire Line
 	1200 2300 1200 3550
 $Comp
-L Device:C C10
+L Device:C C8
 U 1 1 6024A6DF
-P 5700 6300
-F 0 "C10" V 5472 6300 50  0000 C CNN
-F 1 "10uF" V 5563 6300 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5738 6150 50  0001 C CNN
-F 3 "~" H 5700 6300 50  0001 C CNN
-	1    5700 6300
+P 5700 5300
+F 0 "C8" V 5472 5300 50  0000 C CNN
+F 1 "10uF" V 5563 5300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5738 5150 50  0001 C CNN
+F 3 "~" H 5700 5300 50  0001 C CNN
+	1    5700 5300
 	0    1    1    0   
 $EndComp
 $Comp
@@ -318,14 +318,14 @@ F 3 "~" H 4250 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x04_Female J4
+L Connector:Conn_01x06_Female J4
 U 1 1 6024DB17
-P 5750 7400
-F 0 "J4" V 5650 7050 50  0000 C CNN
-F 1 "ESP32" V 5850 7350 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5750 7400 50  0001 C CNN
-F 3 "~" H 5750 7400 50  0001 C CNN
-	1    5750 7400
+P 5650 7400
+F 0 "J4" V 5550 7050 50  0000 C CNN
+F 1 "ESP32" V 5750 7350 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 5650 7400 50  0001 C CNN
+F 3 "~" H 5650 7400 50  0001 C CNN
+	1    5650 7400
 	0    1    1    0   
 $EndComp
 $Comp
@@ -339,8 +339,6 @@ F 3 "~" H 3650 6150 50  0001 C CNN
 	1    3650 6150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5850 7200 5850 6300
 Wire Wire Line
 	5650 7200 5650 6850
 Wire Wire Line
@@ -356,8 +354,6 @@ Connection ~ 4250 3550
 Wire Wire Line
 	4250 5750 4250 6000
 Connection ~ 5850 6000
-Wire Wire Line
-	5850 6000 5850 6300
 Wire Wire Line
 	5750 7200 5750 6500
 Wire Wire Line
@@ -388,7 +384,7 @@ P 4100 1150
 F 0 "Q1" V 4000 1250 50  0000 C CNN
 F 1 "DMP1045U-7" V 4350 1150 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 4300 1075 50  0001 L CIN
-F 3 "https://www.mouser.com/datasheet/2/408/SSM3J332R_datasheet_en_20181015-1150575.pdf" V 4100 1150 50  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/115/DMP1045U-268222.pdf" V 4100 1150 50  0001 L CNN
 	1    4100 1150
 	0    1    1    0   
 $EndComp
@@ -437,68 +433,14 @@ Text Label 3650 5900 0    50   ~ 0
 ESP-LED2
 Wire Wire Line
 	4400 2400 5850 2400
-Wire Wire Line
-	5850 2400 5850 4000
 Connection ~ 5850 2400
 Wire Wire Line
 	3650 3550 3650 5550
 Wire Wire Line
 	4250 3550 4250 5300
-$Comp
-L Device:C C8
-U 1 1 601F4789
-P 5150 4150
-F 0 "C8" V 4922 4150 50  0000 C CNN
-F 1 "100nF" V 5013 4150 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5188 4000 50  0001 C CNN
-F 3 "~" H 5150 4150 50  0001 C CNN
-	1    5150 4150
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5500 4600 5150 4600
-Wire Wire Line
-	5150 4600 5150 4300
-Wire Wire Line
-	5850 5150 5850 5300
-Wire Wire Line
-	5850 5300 5550 5300
 Connection ~ 4250 5300
 Wire Wire Line
 	4250 5300 4250 5450
-Wire Wire Line
-	5550 6300 5550 5300
-Connection ~ 5550 6300
-Connection ~ 5550 5300
-$Comp
-L Transistor_FET:AO3401A Q2
-U 1 1 601FFFAC
-P 7000 5200
-F 0 "Q2" H 6950 5050 50  0000 C CNN
-F 1 "SSM3J332RLF" V 7251 5200 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 7200 5125 50  0001 L CIN
-F 3 "https://www.mouser.com/datasheet/2/408/SSM3J332R_datasheet_en_20181015-1150575.pdf" V 7000 5200 50  0001 L CNN
-	1    7000 5200
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6900 5400 6900 5550
-Wire Wire Line
-	6900 5550 5850 5550
-Wire Wire Line
-	5850 5550 5850 6000
-Connection ~ 5850 6300
-$Comp
-L 0xFD:NCP302HSN30 U2
-U 1 1 6020E573
-P 5850 4600
-F 0 "U2" H 6050 4900 50  0000 L CNN
-F 1 "NCP302HSN30" H 5950 4050 47  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5850 4600 50  0001 C CNN
-F 3 "" H 5850 4600 50  0001 C CNN
-	1    5850 4600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4300 1250 4600 1250
 Wire Wire Line
@@ -513,54 +455,6 @@ Wire Wire Line
 	4100 850  4100 950 
 Text Label 4400 1500 0    50   ~ 0
 DRV
-Wire Wire Line
-	7300 4750 7300 5200
-Wire Wire Line
-	7300 5200 7200 5200
-$Comp
-L Connector:Conn_01x02_Male J3
-U 1 1 6022E5F7
-P 7000 2850
-F 0 "J3" H 7108 3031 50  0000 C CNN
-F 1 "BAT-" H 7108 2940 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7000 2850 50  0001 C CNN
-F 3 "~" H 7000 2850 50  0001 C CNN
-	1    7000 2850
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6650 2400 6650 2100
-Wire Wire Line
-	6650 2000 6800 2000
-Wire Wire Line
-	6800 2100 6650 2100
-Connection ~ 6650 2100
-Wire Wire Line
-	6650 2100 6650 2000
-Wire Wire Line
-	6650 2500 6650 2750
-Wire Wire Line
-	6650 2850 6800 2850
-Wire Wire Line
-	6650 2750 6800 2750
-Connection ~ 6650 2750
-Wire Wire Line
-	6650 2750 6650 2850
-Wire Wire Line
-	6200 4750 6350 4750
-Wire Wire Line
-	5850 4000 6900 4000
-Wire Wire Line
-	6900 4000 6900 5000
-Connection ~ 5850 4000
-Wire Wire Line
-	5850 4000 5850 4300
-Text Label 6200 5550 0    50   ~ 0
-ESP-LOAD
-Text Label 7300 4550 0    50   ~ 0
-LVCO
-Text Label 5250 4600 0    50   ~ 0
-Cd
 $Comp
 L Device:CP1_Small C1
 U 1 1 602D4390
@@ -568,55 +462,10 @@ P 1850 1600
 F 0 "C1" H 1941 1646 50  0000 L CNN
 F 1 "10uF" H 1900 1500 50  0000 L CNN
 F 2 "0xFD:CP_Elec_3x6.4" H 1888 1450 50  0001 C CNN
-F 3 "~" H 1850 1600 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/315/RDE0000C1259-1772497.pdf" H 1850 1600 50  0001 C CNN
 	1    1850 1600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C9
-U 1 1 601C8E5A
-P 4750 5600
-F 0 "C9" V 4522 5600 50  0000 C CNN
-F 1 "100nF" V 4613 5600 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 4788 5450 50  0001 C CNN
-F 3 "~" H 4750 5600 50  0001 C CNN
-	1    4750 5600
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:D_Zener D5
-U 1 1 602F07BB
-P 6500 4750
-F 0 "D5" H 6500 4967 50  0000 C CNN
-F 1 "D_Zener" H 6500 4876 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 6500 4750 50  0001 C CNN
-F 3 "~" H 6500 4750 50  0001 C CNN
-	1    6500 4750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6650 4750 7300 4750
-$Comp
-L Device:R R6
-U 1 1 602F1515
-P 6800 3800
-F 0 "R6" V 6593 3800 50  0000 C CNN
-F 1 "10k" V 6684 3800 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 6730 3800 50  0001 C CNN
-F 3 "~" H 6800 3800 50  0001 C CNN
-	1    6800 3800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7300 4750 7300 3800
-Wire Wire Line
-	7300 3800 6950 3800
-Connection ~ 7300 4750
-Wire Wire Line
-	6650 3800 6150 3800
-Wire Wire Line
-	6150 3800 6150 3550
-Connection ~ 6150 3550
 $Comp
 L Device:CP1_Small C5
 U 1 1 60244BB1
@@ -624,7 +473,7 @@ P 5750 2000
 F 0 "C5" H 5841 2046 50  0000 L CNN
 F 1 "10uF" H 5841 1955 50  0000 L CNN
 F 2 "0xFD:CP_Elec_3x6.4" H 5788 1850 50  0001 C CNN
-F 3 "~" H 5750 2000 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/315/RDE0000C1259-1772497.pdf" H 5750 2000 50  0001 C CNN
 	1    5750 2000
 	1    0    0    -1  
 $EndComp
@@ -667,24 +516,9 @@ Wire Wire Line
 Text Label 3150 2550 0    50   ~ 0
 DONE
 Wire Wire Line
-	5550 7200 5550 6300
-Wire Wire Line
-	5350 6000 5850 6000
-$Comp
-L Device:R R9
-U 1 1 6024C90E
-P 5200 6000
-F 0 "R9" V 4993 6000 50  0000 C CNN
-F 1 "226k" V 5084 6000 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 5130 6000 50  0001 C CNN
-F 3 "~" H 5200 6000 50  0001 C CNN
-	1    5200 6000
-	0    1    1    0   
-$EndComp
+	5100 6000 5850 6000
 Wire Wire Line
 	4250 3550 4000 3550
-Wire Wire Line
-	4250 6000 4750 6000
 Wire Wire Line
 	5750 2250 6150 2250
 Wire Wire Line
@@ -692,7 +526,7 @@ Wire Wire Line
 Wire Wire Line
 	1500 1250 1850 1250
 Wire Wire Line
-	3600 2650 1500 2650
+	3600 2650 2700 2650
 Text Label 3150 2650 0    50   ~ 0
 MPPT
 Text Notes 650  7600 0    79   ~ 0
@@ -701,8 +535,6 @@ Wire Wire Line
 	1850 1250 2200 1250
 Wire Wire Line
 	3450 1250 3800 1250
-Wire Wire Line
-	5050 3550 5150 3550
 Wire Wire Line
 	1850 3550 2200 3550
 Wire Wire Line
@@ -726,11 +558,6 @@ Connection ~ 2550 3550
 Wire Wire Line
 	2550 3550 3650 3550
 Wire Wire Line
-	5150 4000 5150 3550
-Connection ~ 5150 3550
-Wire Wire Line
-	5150 3550 6150 3550
-Wire Wire Line
 	3800 1800 3800 1700
 Wire Wire Line
 	3800 1400 3800 1250
@@ -747,16 +574,110 @@ Wire Wire Line
 	4650 3150 4650 3000
 Wire Wire Line
 	4250 6500 5750 6500
+$Comp
+L Power_Supervisor:LM809 U2
+U 1 1 6068AC07
+P 5100 4450
+F 0 "U2" V 4733 4450 50  0000 C CNN
+F 1 "APX803L" V 4824 4450 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5400 4550 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/115/APX803L-1113564.pdf" H 5400 4550 50  0001 C CNN
+	1    5100 4450
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	4750 5450 4750 5300
+	5050 3550 6150 3550
 Wire Wire Line
-	4250 5300 4750 5300
-Connection ~ 4750 5300
+	5850 2400 5850 4250
 Wire Wire Line
-	4750 5300 5550 5300
+	5500 4450 5850 4450
+Connection ~ 5850 4450
 Wire Wire Line
-	4750 5750 4750 6000
-Connection ~ 4750 6000
+	5850 4450 5850 5300
 Wire Wire Line
-	4750 6000 5050 6000
+	4700 4450 4500 4450
+Wire Wire Line
+	4500 4450 4500 3550
+Connection ~ 4500 3550
+Wire Wire Line
+	4500 3550 4250 3550
+Wire Wire Line
+	2700 2650 2700 7050
+Connection ~ 2700 2650
+Wire Wire Line
+	2700 2650 1500 2650
+Wire Wire Line
+	1200 3550 1200 7100
+Wire Wire Line
+	1200 7100 5350 7100
+Wire Wire Line
+	5350 7100 5350 7200
+Connection ~ 1200 3550
+Wire Wire Line
+	5850 6000 5850 7200
+Connection ~ 5850 5300
+Wire Wire Line
+	5850 5300 5850 5700
+Wire Wire Line
+	5550 7050 5550 7200
+Wire Wire Line
+	2700 7050 5550 7050
+Wire Wire Line
+	5450 7200 5450 5700
+Wire Wire Line
+	5450 4950 5100 4950
+Wire Wire Line
+	5100 4950 5100 4750
+$Comp
+L Device:R R10
+U 1 1 606BFB1B
+P 5650 5700
+F 0 "R10" H 5720 5746 50  0000 L CNN
+F 1 "100k" H 5720 5655 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 5580 5700 50  0001 C CNN
+F 3 "~" H 5650 5700 50  0001 C CNN
+	1    5650 5700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 5700 5500 5700
+Connection ~ 5450 5700
+Wire Wire Line
+	5450 5700 5450 4950
+Wire Wire Line
+	5800 5700 5850 5700
+Connection ~ 5850 5700
+Wire Wire Line
+	5850 5700 5850 6000
+Text Label 5250 4950 0    50   ~ 0
+EN
+Wire Wire Line
+	4250 5300 5550 5300
+Wire Wire Line
+	4250 6000 4800 6000
+$Comp
+L Device:R R9
+U 1 1 6024C90E
+P 4950 6000
+F 0 "R9" V 4743 6000 50  0000 C CNN
+F 1 "226k" V 4834 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 4880 6000 50  0001 C CNN
+F 3 "~" H 4950 6000 50  0001 C CNN
+	1    4950 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 6072256C
+P 5850 4250
+F 0 "#FLG0101" H 5850 4325 50  0001 C CNN
+F 1 "PWR_FLAG" V 5850 4378 50  0000 L CNN
+F 2 "" H 5850 4250 50  0001 C CNN
+F 3 "~" H 5850 4250 50  0001 C CNN
+	1    5850 4250
+	0    1    1    0   
+$EndComp
+Connection ~ 5850 4250
+Wire Wire Line
+	5850 4250 5850 4450
 $EndSCHEMATC
