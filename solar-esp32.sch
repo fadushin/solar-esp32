@@ -530,7 +530,7 @@ Wire Wire Line
 Text Label 3150 2650 0    50   ~ 0
 MPPT
 Text Notes 650  7600 0    79   ~ 0
-Apache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/
+BSD License 2.0
 Wire Wire Line
 	1850 1250 2200 1250
 Wire Wire Line
