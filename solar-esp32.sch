@@ -588,7 +588,7 @@ $EndComp
 Wire Wire Line
 	5050 3550 6150 3550
 Wire Wire Line
-	5850 2400 5850 4250
+	5850 2400 5850 3900
 Wire Wire Line
 	5500 4450 5850 4450
 Connection ~ 5850 4450
@@ -597,7 +597,7 @@ Wire Wire Line
 Wire Wire Line
 	4700 4450 4500 4450
 Wire Wire Line
-	4500 4450 4500 3550
+	4500 4450 4500 3900
 Connection ~ 4500 3550
 Wire Wire Line
 	4500 3550 4250 3550
@@ -680,4 +680,25 @@ $EndComp
 Connection ~ 5850 4250
 Wire Wire Line
 	5850 4250 5850 4450
+$Comp
+L Device:C C9
+U 1 1 607CCEC6
+P 5500 3900
+F 0 "C9" V 5272 3900 50  0000 C CNN
+F 1 "100uF" V 5363 3900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5538 3750 50  0001 C CNN
+F 3 "~" H 5500 3900 50  0001 C CNN
+	1    5500 3900
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5350 3900 4500 3900
+Connection ~ 4500 3900
+Wire Wire Line
+	4500 3900 4500 3550
+Wire Wire Line
+	5650 3900 5850 3900
+Connection ~ 5850 3900
+Wire Wire Line
+	5850 3900 5850 4250
 $EndSCHEMATC
